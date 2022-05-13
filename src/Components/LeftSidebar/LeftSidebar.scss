@@ -1,0 +1,22 @@
+.LeftBar {
+    .Hidden {
+        display: none;
+    }
+    &-Menu {
+        ul li a {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            color: var(--font-color);
+            i {
+                font-size: 1.25rem;
+                padding-right: 0.5rem;
+            }
+            &:hover {
+                background-color: var(--main-a);
+                color: var(--main-theme-darker);
+                border-radius: 5px;
+            }
+        }
+    }
+}
