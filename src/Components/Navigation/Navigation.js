@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaDev } from 'react-icons/fa'
 import { BiBell } from 'react-icons/bi'
+import { FiSearch } from 'react-icons/fi'
 
 const Navigation = () => {
     const [showMenu, setshowMenu] = useState(false)
@@ -10,17 +11,21 @@ const Navigation = () => {
     return (
         <header className='Header'>
             <div className='Header-Container'>
+                <div className='Header-Container-HamburgerMenu' ></div>
                 <a href="https://dev.to" className='Header-Container-Logo'>
                     <FaDev size='3.125rem  ' />
                 </a>
 
                 <div className='Header-Container-SearchBox'>
                     <form action="">
-                        <input type="text" placeholder='Search...' aria-label='searc' />
+                        <input type="text" placeholder='Search...' aria-label='search' />
                     </form>
                 </div>
                 <div className='Header-Container-RightSide'>
                     <button>Create a Post</button>
+                    <i className="Hidden-Search">
+                        <FiSearch />
+                    </i>
                     <i>
                         <BiBell />
                     </i>

@@ -1,0 +1,30 @@
+@media only screen and (max-width:768px) {
+    .Header .Header-Container {
+        &-HamburgerMenu {
+            display: block;
+        }
+        &-SearchBox {
+            display: none;
+        }
+        &-RightSide {
+            .Hidden-Search {
+                display: flex;
+            }
+            button {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .Header .dropdown-menu {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 0.5rem;
+        ul li {
+            padding: 1rem;
+        }
+    }
+}
