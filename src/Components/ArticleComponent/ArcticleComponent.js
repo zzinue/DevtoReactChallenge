@@ -1,9 +1,11 @@
 import React from 'react'
 
-const ArcticleComponent = () => {
+const ArticleComponent = (props) => {
+
+    console.log("posts data", props.post);
     return (
-        <div>ArcticleComponent</div>
+        <div>ArticleComponent</div>
     )
 }
 
-export default ArcticleComponent
+export default ArticleComponent

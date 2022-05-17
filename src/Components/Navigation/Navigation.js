@@ -3,7 +3,7 @@ import { FaDev } from 'react-icons/fa'
 import { BiBell } from 'react-icons/bi'
 import { FiSearch } from 'react-icons/fi'
 
-const Navigation = () => {
+const Navigation = (props) => {
     const [showMenu, setshowMenu] = useState(false)
     const toggle = () => {
         setshowMenu(!showMenu)
@@ -11,7 +11,7 @@ const Navigation = () => {
     return (
         <header className='Header'>
             <div className='Header-Container'>
-                <div className='Header-Container-HamburgerMenu' ></div>
+                <div className='Header-Container-HamburgerMenu' onClick={() => props.openMenu()}></div>
                 <a href="https://dev.to" className='Header-Container-Logo'>
                     <FaDev size='3.125rem  ' />
                 </a>
