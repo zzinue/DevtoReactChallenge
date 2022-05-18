@@ -12,8 +12,8 @@ function App() {
   }
   return (
     <>
-
       <Navigation openMenu={toggle} />
+
       <main className='Main-Container'>
         <LeftSidebar burguerMenu={mobileMenu} closeMenu={toggle} />
         <Content />

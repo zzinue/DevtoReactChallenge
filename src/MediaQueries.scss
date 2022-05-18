@@ -12,6 +12,10 @@
 }
 
 @media only screen and (max-width:768px) {
+    .Main-Container {
+        grid-template-columns: 100%;
+        padding: 1rem;
+    }
     .Header .Header-Container {
         &-HamburgerMenu {
             display: block;
@@ -34,6 +38,22 @@
 }
 
 @media only screen and (max-width:640px) {
+    .Main-Content {
+        header {
+            nav {
+                display: none;
+            }
+            select {
+                display: block;
+            }
+        }
+    }
+    .Hidden-Mobile {
+        display: none;
+    }
+    .Show-Mobile {
+        display: inline-block;
+    }
     .Header .dropdown-menu {
         position: absolute;
         right: 0;
