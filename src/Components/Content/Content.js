@@ -1,8 +1,37 @@
 import React, { useEffect, useState } from 'react'
 import ArticleComponent from '../ArticleComponent/ArcticleComponent'
+import ArticleSkeleton from '../ArticleSkeleton/ArticleSkeleton'
 
 const Content = () => {
     const [articles, setArticles] = useState(null)
+    const fetcAgain = () => {
+        if (articles != null) {
+            fetch('https://dev.to/api/articles')
+                .then((res) => res.json())
+                .then((result) => setArticles([...articles, ...result]))
+        }
+
+    }
+    const handleScroll = () => {
+        const html = document.documentElement;
+        const body = document.body;
+        const windowheight = "innerHeight" in window ? window.innerHeight : html.offsetHeight;
+        const docHeight = Math.max(
+            body.scrollHeight,
+            body.offsetHeight,
+            html.scrollHeight,
+            html.offsetHeight
+        )
+        const windowBottom = windowheight + window.pageYOffset;
+        if (windowBottom >= docHeight) {
+            console.log('We are reached the bottoms')
+            fetcAgain();
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [articles])
     useEffect(() => {
         setTimeout(async () => {
             const res = await fetch('https://dev.to/api/articles/')
@@ -37,6 +66,10 @@ const Content = () => {
                         (article, id) => {
                             return <ArticleComponent key={id} data={article} />;
                         })
+                }
+                {
+                    !articles &&
+                    [1, 2, 3, 4, 5].map(a => <ArticleSkeleton key={a} />)
                 }
             </div>
         </main>

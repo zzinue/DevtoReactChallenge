@@ -1,0 +1,77 @@
+.Skeleton-Wrapper {
+    margin: 1.2rem auto;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    background: #fff;
+    position: relative;
+    &:not(:first-child) {
+        .Skeleton-Image {
+            display: none;
+        }
+    }
+}
+
+.Skeleton {
+    background: var(--main-2);
+    margin: 0.8rem 0;
+    border-radius: 5px;
+}
+
+.Skeleton-Image {
+    width: 100%;
+    height: 200px;
+    background-color: inherit;
+}
+
+.Skeleton.Avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.Skeleton.Text {
+    width: 30%;
+    height: 1rem;
+}
+
+.Skeleton.Title {
+    width: 60%;
+    height: 1.2rem;
+    margin-left: 2rem;
+}
+
+.Skeleton.SmallText {
+    width: 40%;
+    height: 0.8rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+}
+
+.Shimmer-Wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: loading 1.5s infinite
+}
+
+.Shimmer {
+    width: 70%;
+    height: 100%;
+    background-color: rgba(white, 0.3);
+    box-shadow: 0 0 2rem 2rem rgba(white, 0.2);
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-70%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
