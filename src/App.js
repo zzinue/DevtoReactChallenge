@@ -4,6 +4,7 @@ import Navigation from './Components/Navigation/Navigation'
 import RightSidebar from './Components/RightSidebar/RightSidebar';
 import Content from './Components/Content/Content';
 import LeftSidebar from './Components/LeftSidebar/LeftSidebar';
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   const [mobileMenu, setmobileMenu] = useState(false)
@@ -12,6 +13,8 @@ function App() {
   }
   return (
     <>
+
+
       <Navigation openMenu={toggle} />
 
       <main className='Main-Container'>
