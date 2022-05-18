@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ArticleComponent from '../ArticleComponent/ArcticleComponent'
 import ArticleSkeleton from '../ArticleSkeleton/ArticleSkeleton'
-import ArticleComponent2 from '../ArticleComponent2/ArticleComponent2'
 
 const Content = () => {
     const [articles, setArticles] = useState([])
@@ -12,7 +11,7 @@ const Content = () => {
                     .then((result) => setArticles([...articles, ...result]))
             }
     
-        } */
+        } 
     /*    const handleScroll = () => {
            const html = document.documentElement;
            const body = document.body;
@@ -68,10 +67,10 @@ const Content = () => {
                             return <ArticleComponent key={id} data={payload} />;
                         })
                 }
-                {/*    {
+                {
                     !articles &&
                     [1, 2, 3, 4, 5].map(a => <ArticleSkeleton key={a} />)
-                } */}
+                }
             </div>
         </main>
     )

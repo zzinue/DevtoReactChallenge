@@ -3,6 +3,7 @@ import { BiHeart } from 'react-icons/bi';
 import { FaRegComment } from 'react-icons/fa'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
+import { Link } from 'react-router-dom'
 dayjs.extend(relativeTime)
 
 const ArticleComponent = (props) => {
@@ -34,14 +35,10 @@ const ArticleComponent = (props) => {
                 </a>
             )}
             <div className='Article-Details'>
-                <div className='Picture'>
-                    <img src={user.profile_image_90} alt="" />
-                </div>
+
                 <div className='Details'>
-                    <a href={`http://dev.to/${user.username}`} >
-                        <span className='Name'>
-                            {user.username}
-                        </span>
+                    <a href={`http://localhost:3001/posts${user}`} >
+
                     </a>
                     <a href={url}>
                         <span className='Time'>
@@ -104,14 +101,7 @@ const ArticleComponent = (props) => {
                                             </span>
                                         ) : null
                                     }
-                                    {
-                                        comments_count == 0 ? (
-                                            <span>
-                                                <span className='Show-Mobile'>{comments_count}</span>
-                                                <span className='Hidden-Mobile'>Add comment</span>
-                                            </span>
-                                        ) : null
-                                    }
+
                                 </span>
                             </a>
                         </div>

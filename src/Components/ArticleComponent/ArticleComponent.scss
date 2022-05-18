@@ -89,11 +89,10 @@
                 .Save {
                     position: absolute;
                     right: 0;
-                    margin-left: 1rem;
-                    padding-right: 1rem;
+                    margin-left: 4rem;
                     small {
                         color: var(--main-6);
-                        margin-right: 0.5rem;
+                        margin-right: 2rem;
                     }
                     button {
                         padding: 0.3rem 0.8rem;
@@ -111,9 +110,3 @@
         }
     }
 }
-
-
-/* .Hidden{
-    display: none;
-     
-} */
