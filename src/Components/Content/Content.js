@@ -47,7 +47,7 @@ const Content = () => {
                 <h1>Latest</h1>
                 <h1>Top</h1>
                 <nav>
-                    <a href="">Week</a>
+
                     <a href="">Month</a>
                     <a href="">Year</a>
                     <a href="">Infinity</a>
