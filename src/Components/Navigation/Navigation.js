@@ -43,7 +43,10 @@ const Navigation = (props) => {
 
                             ) : (
                                 <>
-                                    <button>Login</button>
+                                    <Link to='login'>
+                                        <button>Login</button>
+                                    </Link>
+
                                     <button>Create Account </button>
 
                                 </>

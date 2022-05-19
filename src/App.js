@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './App.scss';
 import Navigation from './Components/Navigation/Navigation'
-import RightSidebar from './Components/RightSidebar/RightSidebar';
-import Content from './Components/Content/Content';
-import LeftSidebar from './Components/LeftSidebar/LeftSidebar';
+import Home from './Pages/Home'
 import { Routes, Route } from 'react-router-dom'
+import Login from './Pages/Login';
+
 
 function App() {
   const [mobileMenu, setmobileMenu] = useState(false)
@@ -13,15 +13,13 @@ function App() {
   }
   return (
     <>
-
-
       <Navigation openMenu={toggle} />
 
-      <main className='Main-Container'>
-        <LeftSidebar burguerMenu={mobileMenu} closeMenu={toggle} />
-        <Content />
-        <RightSidebar />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home burguerMenu={mobileMenu} closeMenu={toggle} />} />
+        <Route path="login" element={<Login />} />
+      </Routes>
+
 
     </>
   );
