@@ -3,7 +3,6 @@ import { FaDev } from 'react-icons/fa'
 import { BiBell } from 'react-icons/bi'
 import { FiSearch } from 'react-icons/fi'
 import { Link, Route, Routes } from 'react-router-dom'
-import CreateAccount from '../CreateAccount/CreateAccount'
 import { useNavigate } from "react-router-dom";
 
 const Navigation = (props) => {
@@ -46,8 +45,9 @@ const Navigation = (props) => {
                                     <Link to='login'>
                                         <button>Login</button>
                                     </Link>
-
-                                    <button>Create Account </button>
+                                    <Link to='CreateAccount'>
+                                        <button>Create Account </button>
+                                    </Link>
 
                                 </>
                             )
